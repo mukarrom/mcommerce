@@ -98,8 +98,8 @@ class _OtpVerificationScreenState extends State<OtpVerificationScreen> {
                   // errorAnimationController: errorController,
                   controller: _otpTEController,
                   validator: (String? value) {
-                    if (value!.length != 4) {
-                      return "Please enter 4 digit OTP";
+                    if (value!.length != 6) {
+                      return "Please enter 6 digit OTP";
                     } else {
                       return null;
                     }

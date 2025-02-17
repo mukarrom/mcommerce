@@ -46,7 +46,8 @@ class _SplashScreensState extends State<SplashScreens> {
     await AuthController().getUserData();
     await Future.delayed(const Duration(seconds: 2));
 
-    if (await AuthController().isUserLoggedIn() && mounted) {
+    if (await AuthController().isUserLoggedIn() &&
+        mounted) {
       Navigator.pushReplacementNamed(context, MainLayout.name);
     } else {
       if (mounted) {
