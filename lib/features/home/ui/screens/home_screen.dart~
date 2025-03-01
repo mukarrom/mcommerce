@@ -136,7 +136,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     crossAxisSpacing: 8,
                   ),
                   delegate: SliverChildBuilderDelegate(
-                    (context, index) => const FittedBox(
+                    (context, index) => FittedBox(
                       child: ProductItemWidget(),
                     ),
                     childCount: controller.productList.length,

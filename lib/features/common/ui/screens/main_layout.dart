@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:m_commerce/features/category/ui/screens/category_screen.dart';
 import 'package:m_commerce/features/common/ui/controllers/category_list_controller.dart';
 import 'package:m_commerce/features/common/ui/controllers/main_layout_controller.dart';
-import 'package:m_commerce/features/common/ui/controllers/popular_product_list_controller.dart';
+import 'package:m_commerce/features/common/ui/controllers/product_list_controller.dart';
 import 'package:m_commerce/features/home/ui/controller/home_carousel_slider_controller.dart';
 import 'package:m_commerce/features/home/ui/screens/home_screen.dart';
 import 'package:m_commerce/features/products/ui/screens/cart_screen.dart';
@@ -30,7 +30,7 @@ class _MainLayoutState extends State<MainLayout> {
   void initState() {
     Get.find<HomeCarouselSliderController>().getHomeBannerList();
     Get.find<CategoryListController>().getCategoryList();
-    Get.find<PopularProductListController>().getNewProductList();
+    Get.find<ProductListController>().getProducts();
     // Get.find<SpecialProductListController>().getNewProductList();
     // Get.find<NewProductListController>().getNewProductList();
     // Get.find<TopProductListController>().getNewProductList();
