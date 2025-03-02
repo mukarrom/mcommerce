@@ -179,7 +179,7 @@ class _HomeScreenState extends State<HomeScreen> {
           title: category.title ?? "",
           icon: Icons.image_outlined,
           imageUrl: category.icon,
-          categoryId: category.sId ?? "",
+          categoryId: category.sId,
         ),
       );
     }
