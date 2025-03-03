@@ -4,6 +4,7 @@ import 'package:m_commerce/features/category/ui/screens/category_screen.dart';
 import 'package:m_commerce/features/common/ui/controllers/category_list_controller.dart';
 import 'package:m_commerce/features/common/ui/controllers/main_layout_controller.dart';
 import 'package:m_commerce/features/common/ui/controllers/product_list_controller.dart';
+import 'package:m_commerce/features/common/ui/controllers/user_controller.dart';
 import 'package:m_commerce/features/home/ui/controller/home_carousel_slider_controller.dart';
 import 'package:m_commerce/features/home/ui/screens/home_screen.dart';
 import 'package:m_commerce/features/products/ui/screens/cart_screen.dart';
@@ -28,15 +29,11 @@ class _MainLayoutState extends State<MainLayout> {
 
   @override
   void initState() {
+    super.initState();
+    Get.find<UserController>().checkUserLoggedIn();
     Get.find<HomeCarouselSliderController>().getHomeBannerList();
     Get.find<CategoryListController>().getCategoryList();
     Get.find<ProductListController>().getProducts();
-    // Get.find<SpecialProductListController>().getNewProductList();
-    // Get.find<NewProductListController>().getNewProductList();
-    // Get.find<TopProductListController>().getNewProductList();
-    // Get.find<TrendingProductListController>().getNewProductList();
-    // Get.find<RegularProductListController>().getNewProductList();
-    super.initState();
   }
 
   @override
