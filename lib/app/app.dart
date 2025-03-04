@@ -6,6 +6,7 @@ import 'package:m_commerce/features/auth/ui/screens/otp_verification_screen.dart
 import 'package:m_commerce/features/auth/ui/screens/sign_in_screen.dart';
 import 'package:m_commerce/features/auth/ui/screens/sign_up_screen.dart';
 import 'package:m_commerce/features/auth/ui/screens/splash_screens.dart';
+import 'package:m_commerce/features/cart/ui/screens/cart_screen.dart';
 import 'package:m_commerce/features/category/ui/screens/category_screen.dart';
 import 'package:m_commerce/features/common/ui/screens/main_layout.dart';
 import 'package:m_commerce/features/products/ui/screens/product_details_screen.dart';
@@ -64,6 +65,8 @@ class MCommerceApp extends StatelessWidget {
           final Map<String, dynamic> data =
               settings.arguments as Map<String, dynamic>;
           widget = CreateReviewScreen(data: data);
+        } else if (settings.name == CartScreen.name) {
+          widget = const CartScreen();
         }
 
         return MaterialPageRoute(builder: (context) {

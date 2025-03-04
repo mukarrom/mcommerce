@@ -19,7 +19,7 @@ class _CountIncrementDecrementWidgetState
 
   @override
   void initState() {
-    if (widget.count != null) {
+    if(widget.count != null){
       _quantity = widget.count!;
     }
     super.initState();
