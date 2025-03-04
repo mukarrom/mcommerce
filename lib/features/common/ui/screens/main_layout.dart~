@@ -36,8 +36,7 @@ class _MainLayoutState extends State<MainLayout> {
     _initLoadData();
     super.initState();
   }
-
-  void _initLoadData() async {
+  void _initLoadData()async {
     await Get.find<UserController>().checkUserLoggedIn();
     await Get.find<WishListController>().getWishedProductList();
   }
